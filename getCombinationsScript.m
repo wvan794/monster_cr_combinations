@@ -116,7 +116,7 @@ function [monsterlist,row] = getNextMonster(monsterlist,curCRidx,row,col,CR,XP,m
         CRstart = curCRidx(col-1);
     end
     
-    for i = CRstart:-1:minCRidx %we go to two since the first CR is zero with zero XP
+    for i = CRstart:-1:minCRidx 
         if sum(XP(curCRidx)) + XP(i) > max
             % if the sum of the XP of the current monsters plus the current
             % monster exceed the threshold, continue to the next lower CR
