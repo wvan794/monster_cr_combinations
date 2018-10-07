@@ -129,7 +129,7 @@ function [monsterlist,row] = getNextMonster(monsterlist,curCRidx,row,col,CR,XP,m
             break
         elseif col==length(curCRidx)
             %if this is the last monster and the two previous
-            %conditions were not met, then this is a viable monster
+            %conditions were not met, then this is a viable monster set
             curCRidx(col) = i;
             monsterlist(row,:) = [CR(curCRidx) sum(XP(curCRidx))];
             row = row+1;
