@@ -2,12 +2,12 @@ clearvars
 clc
 tic
 level = [6 6 6 6];
-diff = 'easy';
-diff = 'medium';
-diff = 'hard';
-diff = 'difficult';
+diff{1} = 'easy';
+diff{2} = 'medium';
+diff{3} = 'hard';
+diff{4} = 'difficult';
 n   = 7;
-[monsterlist,threshold] = getCombinations(level,n,'medium');
+[monsterlist,threshold] = getCombinations(level,n,diff{2});
 toc
 function [monsterlist,partyThreshold] = getCombinations(level,num,diff)
 %GETCOMBINATIONS Summary of this function goes here
